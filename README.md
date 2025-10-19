@@ -10,6 +10,7 @@ The program contains 3 scenarios test:
 
 ---
 ## Project Structure
+```
 |— council/
 |    |— CouncilMember.java  # Main entry point
 |    |— TcpTransport.java   # TCP communication layer
@@ -23,7 +24,7 @@ The program contains 3 scenarios test:
 |— network.config           # Member ID to host:port mapping
 |— run_tests.sh             # Automated test script (Scenario 1–3)
 |— README.md
-
+```
 ---
 ## Compile
 ```bash

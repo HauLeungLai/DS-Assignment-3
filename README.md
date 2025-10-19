@@ -10,19 +10,19 @@ The program contains 3 scenarios test:
 
 ---
 ## Project Structure
-|--- council/
-│    |--- CouncilMember.java  #Main entry point
-│    |--- TcpTransport.java  #TCP communication layer
-│    |--- NetWorkConfig.java  #Config loader for member host:port
-│    |--- MessageType.java  # Message type enum
-│    |--- MessageCodec.java  # Serialization / deserialization
-│   |--- PaxosState.java  # Acceptor state
-│   |--- Proposer.java  # Proposer role logic
-│   |---Acceptor.java  # Acceptor role logic
-│   |---Learner.java  # Learner role logic
-|--- network.config  # Member ID to host:port mapping
-|--- run_tests.sh  # Automated test script (Scenario 1-3)
-|--- README.md 
+|— council/
+|    |— CouncilMember.java  # Main entry point
+|    |— TcpTransport.java   # TCP communication layer
+|    |— NetworkConfig.java  # Config loader for member host:port
+|    |— MessageType.java    # Message type enum
+|    |— MessageCodec.java   # Serialization / deserialization
+|    |— PaxosState.java     # Acceptor state
+|    |— Proposer.java       # Proposer role logic
+|    |— Acceptor.java       # Acceptor role logic
+|    |— Learner.java        # Learner role logic
+|— network.config           # Member ID to host:port mapping
+|— run_tests.sh             # Automated test script (Scenario 1–3)
+|— README.md
 
 ---
 ## Compile

@@ -27,6 +27,7 @@ The program contains 3 scenarios test:
 ```
 ---
 ## How to compile
+Navigate to the folder location in terminal and: 
 ```bash
 javac -d out $(find src -name "*.java")
 ```

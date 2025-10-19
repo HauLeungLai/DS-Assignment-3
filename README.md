@@ -1,11 +1,11 @@
 # Assignment 3
 ## Overview 
-This project is about implements the **Poxos Consesus Algorithm** in Java, simulating the election of a Council President **Adelaide Suburbs Council**.
+This project is about implements the **Paxos Consesus Algorithm** in Java, simulating the election of a Council President **Adelaide Suburbs Council**.
 The system consists of 9 council members M1-M9, each acting as **Proposer**, **Acceptor**, and **Learner**, and communicate via TCP sockets. 
 
-The program contains 3 scenarios test:
+The program is tested under 3 scenarios test to make sure:
 - A single president is elected, even if multiple proposals are made concurrently.
-- The system reaches consensus despite network latency or membere failures.
+- The system reaches consensus despite network latency or member failures.
 - All running non-faulty nodes learn the same final decision.
 
 ---
@@ -27,15 +27,16 @@ The program contains 3 scenarios test:
 ```
 ---
 ## How to compile
-Navigate to the folder location in terminal and: 
+Open the terminal in the project folder and run: 
 ```bash
 javac -d out $(find src -name "*.java")
 ```
+This will compile all Java files into the out/ directory.
 
 ---
 ## How to run
-If you wish to run it in manual way (more complex)
-You need to start nine terminals or background processes, one per member:
+Option 1: Manual (Complex)
+Start nine terminals or background processes, one per member:
 ```bash
 java -cp out council.CouncilMember M1
 java -cp out council.CouncilMember M2
@@ -44,20 +45,26 @@ java -cp out council.CouncilMember M3
 java -cp out council.CouncilMember M9
 ```
 What you should see is: 
-xx listening on 900x
-xx ready. Type a candidate id to propose (e.g., M5).
+[Mx] listening on 900x
+[Mx] ready. Type a candidate id to propose (e.g., M5).
 
 Types a candidate ID in any node(e.g., M4 proposes M5) to inititate Paxos.
 All non-faulty nodes should print:
 CONSENSUS: M5 has been elected Council President!
 
 ---
-The recommand way to test is test with **run_tests.sh**
+Option 2: Auto Testing (recommended)
+Use the provided shell script:
 ```bash
 chmod +x run_tests.sh
 ./run_tests.sh
 ```
-After testing 3 scenario, it should be all pass and record each member's log in "logs" 
+This will automatically launch all 9 members and run 3 test sernarios. Also, it will collect logs for each member under the logs folder. 
+
+You should see:
+Scenarion 1: PASS
+Scenarion 2: PASS
+Scenarion 3: PASS
 
 ---
 ## Configuration

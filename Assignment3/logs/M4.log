@@ -1,0 +1,6 @@
+[M4] listening on 9004
+[M4] ready. Type a candidate id to propose (e.g., M5).
+[M4] PREPARE 1.M4 for M5
+[M4] ACCEPT_REQUEST 1.M4 value=M5
+[M4] DECIDE 1.M4 -> M5
+CONSENSUS: M5 has been elected Council President!

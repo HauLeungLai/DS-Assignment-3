@@ -26,7 +26,7 @@ The program contains 3 scenarios test:
 |— README.md
 ```
 ---
-## Compile
+## How to compile
 ```bash
 javac -d out $(find src -name "*.java")
 ```
@@ -51,7 +51,7 @@ All non-faulty nodes should print:
 CONSENSUS: M5 has been elected Council President!
 
 ---
-The more recommand way to test it is test with **run_tests.sh**
+The recommand way to test is test with **run_tests.sh**
 ```bash
 chmod +x run_tests.sh
 ./run_tests.sh
